@@ -13,5 +13,19 @@
 <img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRipGvv3cgQFF3NABgSVx2sbReijpnP1h-8wg&usqp=CAU" />
 <img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSndzdVGRsgIw_GrhgwaKA7xJj5OR1c1R7is-OdEApG8zBlLAnCr2nXsBL6OPbkuw4sRU&usqp=CAU"/>
 <img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRLmX8Nuowl-7BJurJx2b_tFhPb6obwpJiBWD3tgNKr0grd43rlnr_r-e9kmiEUIbejpk&usqp=CAU" />
-<img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCBavr1Xr1wgxENlrF8fXGJYd710FHvzE7dg&usqp=CAU" />
+<img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCBavr1Xr1wgxENlrF8fXGJYd710FHvzE7dg&usqp=CAU" /> 
+<img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6J3XzQUmhZs_ZZdJZHPguwhpTdsd7gorj6Q&usqp=CAU" />
 </div>
+  
+## Desafio proposto:
+Você deverá desenvolver uma aplicação para cadastro de produtos e gestão de estoque, sendo obrigatória a implementação de um sistema de cadastro/autenticação, seguindo os padrões básicos de segurança. Observação importante: é permitida a utilização de frameworks de autenticação já existentes, como o Identity, no caso do .Net Core.
+  
+São páginas obrigatórias no sistema:
+
+- Login :heavy_check_mark:
+- Cadastro :heavy_check_mark:
+- Cadastro de produtos :heavy_check_mark:
+- Listagem de produtos :heavy_check_mark:
+- Cadastro de movimentações de estoque (tanto saídas como entradas) :heavy_check_mark:
+- Visualização/Listagem das movimentações realizadas :heavy_check_mark:
+
