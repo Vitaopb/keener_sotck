@@ -3,8 +3,9 @@ import { RegisterUserController } from '../../Controllers/Users/registerUserCont
 import { LoginUserController }  from '../../Controllers/Users/loginUserController';
 
 const userRouter = Router();
-const registerUserController = new RegisterUserController();
+
 const loginUserController = new LoginUserController();
+const registerUserController = new RegisterUserController();
 
 userRouter.post('/user/register', registerUserController.register);
 userRouter.post('/user/login', loginUserController.login);
