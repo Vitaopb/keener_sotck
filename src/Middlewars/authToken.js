@@ -11,6 +11,7 @@ function checkToken(req, res, next) {
   try {
     jwt.verify(token, process.env.JWT_SECRET);
     next();
+
   } catch (error) {
     return res.status(403).json({ message: 'Access denied. Invalid token.' });
   }
