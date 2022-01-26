@@ -24,7 +24,7 @@ model Product {
   name        String  
   description String
   barcode     String @unique  
-  price       Int  
+  price       Decimal  
   userId      Int
   author      User @relation(fields: [userId], references: [id])
   createdAt   DateTime @default(now())
