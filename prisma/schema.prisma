@@ -26,9 +26,10 @@ model Product {
   barcode     String @unique  
   price       Decimal  
   userId      Int
-  author      User @relation(fields: [userId], references: [id])
+  user        User @relation(fields: [userId], references: [id])
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  moviment    Moviment[]
 
   @@map("products")
 }

@@ -3,6 +3,7 @@ import { RegisterUserController } from '../../Controllers/Users/registerUserCont
 import { LoginUserController }  from '../../Controllers/Users/loginUserController';
 
 const userRouter = Router();
+
 const loginUserController = new LoginUserController();
 const registerUserController = new RegisterUserController();
 

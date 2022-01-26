@@ -83,7 +83,6 @@ export class ProductController {
       else if (product.userId !== user.id) {
         return res.status(401).json({ message: 'You are not authorized to access this product' });
       }
-
       return res.status(200).json(product);
     } catch (error) {
       console.log(error);
@@ -150,4 +149,6 @@ export class ProductController {
     }
   }
 }
+
+
 
