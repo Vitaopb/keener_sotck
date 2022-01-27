@@ -8,16 +8,15 @@ export class ProductController {
    try {
      const user = await prisma.user.findUnique({ where: { id: Number(id) } });
  
-     if (!user) {
+     if (!user) 
        return res.status(404).json({ message: 'User not found' });
-     }
+     
  
      let product = await prisma.product.findUnique({ where: { barcode } });
  
-     if(product) {
+     if(product) 
        return res.status(400).json({ message: 'Product already exists' });
-     }
-     console.table(req.body);
+     
      product = await prisma.product.create({
        data: {
          name,
