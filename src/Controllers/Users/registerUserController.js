@@ -1,5 +1,4 @@
 import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
 import { prisma } from '../../Database/database';
 
 export class RegisterUserController {

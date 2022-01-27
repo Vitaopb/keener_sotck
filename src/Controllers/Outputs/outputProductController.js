@@ -3,7 +3,8 @@ import { prisma } from '../../Database/database';
 export class OutputProductsController {
 
   async register(req, res) {
-    const { price, productId, quantity } = req.body;
+    try {
+      const { price, productId, quantity } = req.body;
     const { id } = req.params;
     
     const user = await prisma.user.findUnique({ where: { id: Number(id) } });
@@ -14,21 +15,22 @@ export class OutputProductsController {
     if (!product)
       return res.status(404).json({ message: 'Product not found' });
     
-    const output = await prisma.output_Product.create({
+    const outputProduct = await prisma.output_Product.create({
       data: {
-        price,
         productId,
-        quantity,
+        price,
+        quantity
       },
       include: {
         product: {
-          select: {
-            name: true
-          }
+          select: { name: true }
         }
       }
-    })
-    return res.status(201).json(output);
+    });
+    return res.status(201).json(outputProduct);
+    } catch (error) {
+      console.log(error);
+    }
   } 
 
   async listAllProduct(req, res) {
