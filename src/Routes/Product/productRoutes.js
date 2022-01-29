@@ -1,15 +1,25 @@
 import { Router } from 'express';
-import { ProductController } from '../../Controllers/Products/productController';
-import { AuthToken } from '../../Middlewars/authToken';
+import { CreateProductController } from '../../Controllers/Product/CreateProductController';
+import { ListAllProductController } from '../../Controllers/Product/ListAllProductController';
+import { ListOneProductController } from '../../Controllers/Product/ListOneProductController';
+import { UpdateProductController } from '../../Controllers/Product/UpdateProductController';
+import { DeleteProductController } from '../../Controllers/Product/DeleteProductController';
+import { Authorization } from '../../Middlewars/Authorization'
 
-const productRoutes = Router();
-const productController = new ProductController();
-const authToken = new AuthToken();
+const productRouter = Router(),
+      authorization = new Authorization(),
+      createProductController = new CreateProductController(),
+      listAllProductController = new ListAllProductController(),
+      listOneProductController = new ListOneProductController(),
+      updateProductController = new UpdateProductController(),
+      deleteProductController = new DeleteProductController();
 
-productRoutes.post('/product/user/:id', authToken.checkToken, productController.create);
-productRoutes.get('/products/user/:id', authToken.checkToken, productController.listAll);
-productRoutes.get('/product/user/:id/:barcode', authToken.checkToken, productController.listOne);
-productRoutes.put('/product/user/:id/:barcode', authToken.checkToken, productController.update);
-productRoutes.delete('/product/user/:id/:barcode', authToken.checkToken, productController.delete);
+productRouter.post('/product/create/:id', authorization.check, createProductController.handle);
+productRouter.get('/products/:id', authorization.check, listAllProductController.handle);
+productRouter.get('/product/:id/:barcode', authorization.check, listOneProductController.handle);
+productRouter.put('/product/:id/:barcode', authorization.check, updateProductController.handle);
+productRouter.delete('/product/:id/:barcode', authorization.check, deleteProductController.handle);
 
-export { productRoutes };
+export { productRouter };
+
+

@@ -1,10 +1,10 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { prisma } from '../../Database/database';
+import { prisma } from '../../database';
 
 export class LoginUserController {
 
-  async login(req, res) {
+  async handle(req, res) {
     try {
       const { email, password } = req.body;
   

@@ -1,9 +1,9 @@
 import bcrypt from 'bcrypt';
-import { prisma } from '../../Database/database';
+import { prisma } from '../../database';
 
 export class RegisterUserController {
 
-  async register(req, res) {
+  async handle(req, res) {
     try {
       const { name, email, password, confirmpassword } = req.body;
     
@@ -43,7 +43,7 @@ export class RegisterUserController {
     
       res.status(201).json({ user });
     } catch (error) {
-      return res.json({ error });
+      console.log(error);
     }
   }
 }

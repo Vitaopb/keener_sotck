@@ -2,12 +2,17 @@ import dotenv from 'dotenv';
 dotenv.config({ silent: process.env.NODE_ENV === 'production' });
 import express from 'express';
 import { userRouter } from './Routes/User/userRoutes';
-import { productRoutes } from './Routes/Product/productRoutes';
+import { productRouter } from './Routes/Product/productRoutes';
+import { movimentRouter } from './Routes/Moviment/movimentRoutes';
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 app.use(express.json());
 app.use(userRouter);
-app.use(productRoutes);
+app.use(productRouter);
+app.use(movimentRouter)
 
-app.listen(3333, console.log('Server started on port 3333'));
+app.listen(port, () => console.log(`Server is running on port ${port}`));
+

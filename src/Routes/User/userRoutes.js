@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import { RegisterUserController } from '../../Controllers/Users/registerUserController';
-import { LoginUserController }  from '../../Controllers/Users/loginUserController';
+import { RegisterUserController } from '../../Controllers/User/RegisterUserController';
+import { LoginUserController }  from '../../Controllers/User/LoginUserController';
 
-const userRouter = Router();
-const registerUserController = new RegisterUserController();
-const loginUserController = new LoginUserController();
+const userRouter = Router(),
+      loginUserController = new LoginUserController(),
+      registerUserController = new RegisterUserController();
 
-userRouter.post('/user/register', registerUserController.register);
-userRouter.post('/user/login', loginUserController.login);
+userRouter.post('/user/register', registerUserController.handle);
+userRouter.post('/user/login', loginUserController.handle);
 
 export { userRouter };
