@@ -11,7 +11,7 @@
 <img height="50" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png" alt="express"/>
 <img height="50" src="https://static.imasters.com.br/wp-content/uploads/2018/07/25101553/Autenticac%CC%A7a%CC%83o-JSON-Web-Token-JWT-em-Node.js.jpg"/>
 <img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRipGvv3cgQFF3NABgSVx2sbReijpnP1h-8wg&usqp=CAU" />
-<img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSndzdVGRsgIw_GrhgwaKA7xJj5OR1c1R7is-OdEApG8zBlLAnCr2nXsBL6OPbkuw4sRU&usqp=CAU"/>
+<img height="50" src="https://www.gartner.com/pi/vendorimages/postman_full-life-cycle-api-management_1633960356020.png"/>
 <img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRLmX8Nuowl-7BJurJx2b_tFhPb6obwpJiBWD3tgNKr0grd43rlnr_r-e9kmiEUIbejpk&usqp=CAU" />
 <img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCBavr1Xr1wgxENlrF8fXGJYd710FHvzE7dg&usqp=CAU" /> 
 <img height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6J3XzQUmhZs_ZZdJZHPguwhpTdsd7gorj6Q&usqp=CAU" />
@@ -28,4 +28,14 @@ São páginas obrigatórias no sistema:
 - Listagem de produtos :heavy_check_mark:
 - Cadastro de movimentações de estoque (tanto saídas como entradas) :heavy_check_mark:
 - Visualização/Listagem das movimentações realizadas :heavy_check_mark:
+<hr>
+  
+## Como rodar na sua maquina:
+### Será nescessario instalar:
+  - [Docker](https://docs.docker.com/get-docker/)
+  - [Postman](https://www.postman.com/downloads/) (Para uma melhor experiência, mas pode ser qualquer outra API client.)
 
+### Materiais de apoio:
+  - [Documentção da API](https://documenter.getpostman.com/view/19371532/UVeCQUC7)
+  - [Arquivo de configuração das Rotas](https://drive.google.com/file/d/18KIxSnLCsM4G1WV00dPsS1LE2mndjuj4/view?usp=sharing) 
+  - Só fazer o download e importar em sua API client desejada.
