@@ -1,4 +1,4 @@
-import { prisma } from "../../database";
+import { prisma } from '../../database';
 
 export class ListOneMovementsController {
   async handle(req, res) {
