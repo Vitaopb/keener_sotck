@@ -4,14 +4,14 @@ import { prisma } from  '../../database';
 export class ListOneProductController {
   async handle(req, res) {
     try {
-      const { id } = req.params;
+      const { userId } = req.params;
       const { barcode } = req.params;
-
-      const user = await prisma.user.findUnique({ where: { id: Number(id) } });
+      const user = await prisma.user.findUnique({ where: { id: Number(userId) } });
       const product = await prisma.product.findUnique({ 
         where: { barcode },
         include: { user: { select: { name: true } } }
       });
+
       if (!product) {
         return res.status(404).json({ message: 'Product not found' });
       }

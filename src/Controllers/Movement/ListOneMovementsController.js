@@ -1,17 +1,19 @@
 import { prisma } from "../../database";
 
-export class ListOneMovimentationController {
+export class ListOneMovementsController {
   async handle(req, res) {
     try {
       const { serialNumber, userId } = req.params;
-
+      let moviment = await prisma.movimentation.findUnique({ where: { serialNumber } });
       const user = await prisma.user.findUnique({ where: { id: Number(userId) } });
-      if(!user) {
-        return res.status(404).json({ message: 'user not found' });
+
+      if(!user || !moviment) {
+        const missedArgument = !user ? 'user not found' : 'moviment not found';
+        return res.status(404).json({ message: missedArgument });
       }
 
-      const moviment = await prisma.movimentation.findUnique({
-        where: { serialNumber: Number(serialNumber) },
+      moviment = await prisma.movimentation.findUnique({
+        where: { serialNumber },
         include: {
           product: { select: { name: true } },
           user: { select: { name: true } }

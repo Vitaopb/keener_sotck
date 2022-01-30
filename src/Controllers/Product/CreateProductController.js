@@ -2,19 +2,21 @@ import { prisma } from  '../../database';
 
 export class CreateProductController {
   async handle(req, res) {
-    const { name, price, description, barcode } = req.body;
-    const { id } = req.params;
-  
+    
     try {
-      const user = await prisma.user.findUnique({ where: { id: Number(id) } });
-  
-      if (!user) 
-        return res.status(404).json({ message: 'User not found' });
-      
+      const { userId } = req.params;
+      const { name, price, description, barcode } = req.body;
       let product = await prisma.product.findUnique({ where: { barcode } });
+      const user = await prisma.user.findUnique({ where: { id: Number(userId) } });
   
-      if(product) 
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+      
+  
+      if(product) {
         return res.status(400).json({ message: 'Product already exists' });
+      }
       
       product = await prisma.product.create({
         data: {

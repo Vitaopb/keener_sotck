@@ -1,6 +1,6 @@
 import { prisma } from "../../database";
 
-export class CreateMovimentController {
+export class CreateMovementController {
   async handle(req, res) {
     try {
       const { type, price, serialNumber, quantity, productId } = req.body;
@@ -8,7 +8,8 @@ export class CreateMovimentController {
 
       const user = await prisma.user.findUnique({ where: { id: Number(userId) } });
       const product = await prisma.product.findUnique({ where: { id: Number(productId) } });
-      let moviment = await prisma.movimentation.findUnique({ where: { serialNumber: Number(serialNumber) } });
+      let moviment = await prisma.movimentation.findUnique({ where: { serialNumber } });
+      
       if(!['entry', 'exit'].includes(type)) {
         return res.status(400).json({
            error: 'Invalid type',

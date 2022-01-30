@@ -7,7 +7,6 @@ export class RegisterUserController {
     try {
       const { name, email, password, confirmpassword } = req.body;
     
-      // Validations
       if(!name || !email || !password || !confirmpassword) {
         return res.status(422).json({
           message: 'All fields are required'
@@ -20,7 +19,6 @@ export class RegisterUserController {
         })
       }
     
-      // Check if user already exists
       let user = await prisma.user.findUnique({ where: { email } });
       if(user) {
         return res.status(422).json({
@@ -28,11 +26,9 @@ export class RegisterUserController {
         })
       }
     
-      // Hash password
       const salt = await bcrypt.genSalt(12);
       const hashedPassword = await bcrypt.hash(password, salt);
     
-      // Create user
       user = await prisma.user.create({
         data: {
           name,

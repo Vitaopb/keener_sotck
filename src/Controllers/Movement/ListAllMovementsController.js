@@ -1,6 +1,6 @@
 import { prisma } from "../../database";
 
-export class ListAllMovimentationController {
+export class ListAllMovementsController {
   async handle(req, res) {
     try {
       const { userId } = req.params;

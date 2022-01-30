@@ -14,11 +14,11 @@ const productRouter = Router(),
       updateProductController = new UpdateProductController(),
       deleteProductController = new DeleteProductController();
 
-productRouter.post('/product/create/:id', authorization.check, createProductController.handle);
-productRouter.get('/products/:id', authorization.check, listAllProductController.handle);
-productRouter.get('/product/:id/:barcode', authorization.check, listOneProductController.handle);
-productRouter.put('/product/:id/:barcode', authorization.check, updateProductController.handle);
-productRouter.delete('/product/:id/:barcode', authorization.check, deleteProductController.handle);
+productRouter.post('/product/:userId', authorization.check, createProductController.handle);
+productRouter.get('/products/:userId', authorization.check, listAllProductController.handle);
+productRouter.get('/product/:userId/:barcode', authorization.check, listOneProductController.handle);
+productRouter.put('/product/:userId/:barcode', authorization.check, updateProductController.handle);
+productRouter.delete('/product/:userId/:barcode', authorization.check, deleteProductController.handle);
 
 export { productRouter };
 

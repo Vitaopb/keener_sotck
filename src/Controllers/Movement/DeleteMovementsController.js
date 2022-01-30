@@ -1,11 +1,11 @@
 import { prisma } from "../../database";
 
-export class DeleteMovimentationController {
+export class DeleteMovementsController {
   async handle(req, res) {
     try {
       const { userId, serialNumber } = req.params;
       const user = await prisma.user.findUnique({ where: { id: Number(userId) } });
-      let moviment = await prisma.movimentation.findUnique({ where: { serialNumber: Number(serialNumber) } });
+      let moviment = await prisma.movimentation.findUnique({ where: { serialNumber } });
 
       if (!user) {
         return res.status(404).json({ message: 'User not found' });
@@ -19,7 +19,7 @@ export class DeleteMovimentationController {
         return res.status(404).json({ message: 'Moviment not found' });
       }
 
-      moviment = await prisma.movimentation.delete({ where: { serialNumber: Number(serialNumber) } });
+      moviment = await prisma.movimentation.delete({ where: { serialNumber } });
 
       return res.status(200).json({ message: 'Moviment deleted', moviment });
     } catch (error) {

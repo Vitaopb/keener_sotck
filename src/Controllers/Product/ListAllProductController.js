@@ -3,8 +3,9 @@ import { prisma } from  '../../database';
 export class ListAllProductController {
   async handle(req, res) {
     try {
-      const { id } = req.params;
-      const user = await prisma.user.findUnique({ where: { id: Number(id) } });
+      const { userId } = req.params;
+      const user = await prisma.user.findUnique({ where: { id: Number(userId) } });
+
       if (!user) {
         return res.status(404).json({ message: 'User not found' });
       }

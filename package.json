@@ -17,6 +17,7 @@
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
-    "prisma": "^3.8.1"
+    "prisma": "^3.8.1",
+    "swagger-ui-express": "^4.3.0"
   }
 }
