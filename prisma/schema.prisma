@@ -13,7 +13,7 @@ model User {
   email       String  @unique
   password    String  
   products    Product[]
-  moviment    Movimentation[]
+  movement    Movement[]
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
@@ -28,7 +28,7 @@ model Product {
   price       Decimal
   userId      Int
   user        User    @relation(fields: [userId], references: [id])
-  moviment    Movimentation[]
+  movement    Movement[]
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
