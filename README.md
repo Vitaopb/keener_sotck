@@ -32,11 +32,32 @@ São páginas obrigatórias no sistema:
   
 ## Como rodar na sua maquina:
 ### Será nescessario instalar:
-  - [Docker](https://docs.docker.com/get-docker/)
+  - [Node](https://nodejs.org/en/download/)
+  - [Docker](https://docs.docker.com/get-docker/) e o [Docker-compose](https://docs.docker.com/compose/install/)
+  - [Git](https://git-scm.com/downloads)
   - [Postman](https://www.postman.com/downloads/) (Para uma melhor experiência, mas pode ser qualquer outra API client.)
 
 ### Materiais de apoio:
-  - [Documentção da API](https://documenter.getpostman.com/view/19371532/UVeCQUC7)
+  - [Documentção da API - EN-USA](https://documenter.getpostman.com/view/19371532/UVeCQUC7)
+  - [Documentação da API - PT-BR](https://documenter.getpostman.com/view/19371532/UVeCRUQf)
   - [Arquivo de configuração das Rotas](https://drive.google.com/file/d/1r83cNMMYVBF18ZiDlaO4g_hM7uXPhzzL/view?usp=sharing) 
   - Só fazer o download e importar em sua API client desejada.
 
+## Próximos passos:
+ - Abra seu terminal e cole os comandos: 
+ - Se estiver no Windows abra o GitBash (Será baixado junto com Git).
+```bash
+ git clone https://github.com/Vitaopb/keener_stock.git
+ cd keener_stock
+```
+- Inicializando o banco de dados:
+```bash
+docker-compose up -d --build
+```
+- Inicializando a aplicação:
+```bash
+bash entrypoint.sh
+```
+<hr>
+
+## Testando a aplicação:
