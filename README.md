@@ -61,3 +61,4 @@ bash entrypoint.sh
 - Agora você irá precisar de uma API client, para testar as rotas da aplicação.
 - Recomendo o [postman](https://www.postman.com/downloads/).
 - Agora você precisa baixar e importar o arquivo de configuração das rotas.
+- Basta seguir a documentação a cima da API.
