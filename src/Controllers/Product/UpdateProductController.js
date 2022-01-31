@@ -30,7 +30,6 @@ export class UpdateProductController {
         }, 
         include: { user: { select: { name: true } } }
       });
-      console.log(product);
       return res.status(200).json(product);
     } catch (error) {
       console.log(error);
