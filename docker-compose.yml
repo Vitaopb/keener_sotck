@@ -1,17 +1,6 @@
 version: '3'
 
 services:
-  # app:
-  #   build: ./app
-  #   container_name: node
-  #   entrypoint: dockerize -wait tcp:/postgres:5431 -timeout 30s ./entrypoint.sh
-  #   volumes:
-  #   - "./app:/home/node/app"
-  #   networks:
-  #     - keener-stocks-network
-  #   ports:
-  #     - "3000:3000"
-
   postgres:
     image: postgres
     container_name: postgres
@@ -22,9 +11,3 @@ services:
       - "5431:5432"
     volumes:
       - /home/postgres:/var/lib/postgresql/data 
-    # networks:
-    #   - keener-stocks-network
-      
-# networks: 
-#   keener-stocks-network:
-#     driver: bridge
