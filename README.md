@@ -30,6 +30,17 @@ São páginas obrigatórias no sistema:
 - Visualização/Listagem das movimentações realizadas :heavy_check_mark:
 <hr>
   
+## Sobre a Aplicação:
+Foi usado o nodejs juntamente com o prisma ORM, estava começando a estudar sobre esse ORM, e decidir fazer o sistema com o memso. E digo que de fato ele é muito fácil e intuitivo de se trabalhar, e além do mais tem uma documentação muito clara e prática.<br>
+Falando sobre autenticação além de usar o bcrypt para criar o hash da senha, foi usado também autenticação com JWT(Json Web Token).<br>
+O express foi o framework usando para fazer parte dessa aplicação e com certeza foi trio perfeito (Express, prismaORM e PostgresSQL).<br>
+Foi um pouco desafiador pra mim, pois nunca tinha feito nada realacionado a controle de estoque, estava me perguntando com ficaria o relacinamento<br>
+das tabelas, mas consegui e acredito que ficou muito um ótimo sistema de cadastro de produtos e gestão de estoque.<br>
+<br>
+Falando sobre o postman, fiquei muito supreso com o quanto de funcionalidades ele tem, surreal. Uma API client fantástica.<br>
+Usei também um pouco de shell script para automatizar os comandos que prescisam ser rodados, ele támbem faz uma copía dos das variáveis do .env.example para o arquivo .env.
+<hr>
+  
 ## Como rodar na sua maquina:
 ### Será nescessario instalar:
   - [Node](https://nodejs.org/en/download/)
@@ -62,3 +73,15 @@ bash entrypoint.sh
 - Recomendo o [postman](https://www.postman.com/downloads/).
 - Agora você precisa baixar e importar o arquivo de configuração das rotas.
 - Basta seguir a documentação a cima da API.
+
+#### Para acessar o banco de dados basta rodar:
+  ```bash
+  yarn prisma studio
+  ```
+ <hr>
+  
+<div align="center">
+  
+  <img src="https://media-exp1.licdn.com/dms/image/C4D16AQHlNPtYR2gxDw/profile-displaybackgroundimage-shrink_200_800/0/1635186338170?e=1648080000&v=beta&t=HeVDxJ3C3yLGpcopjN3i4kH9ero5VoLEkcGlWnSz844" />
+  
+</div>
