@@ -6,6 +6,6 @@ if [ ! -f ".env" ]; then
 fi
 
 docker-compose up -d --build
-yarn
-yarn prisma migrate dev --name init
-yarn start
+npm install
+npm prisma migrate dev --name init
+npm start
