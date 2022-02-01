@@ -50,14 +50,15 @@ São páginas obrigatórias no sistema:
  git clone https://github.com/Vitaopb/keener_stock.git
  cd keener_stock
 ```
-- Inicializando o banco de dados:
-```bash
-docker-compose up -d --build
-```
 - Inicializando a aplicação:
 ```bash
 bash entrypoint.sh
 ```
+ - Se tudo funcionar você receberá "Server is running on port portnumber".
 <hr>
 
 ## Testando a aplicação:
+- Agora você irá precisar de uma API client, para testar as rotas da aplicação.
+- Recomendo o [postman](https://www.postman.com/downloads/).
+- Agora você precisa baixar e importar o arquivo de configuração das rotas.
+- Basta seguir a documentação a cima da API.
