@@ -78,6 +78,9 @@ bash entrypoint.sh
   ```bash
   yarn prisma studio
   ```
+ 
+ ### Sobre as variáveis de ambiente:
+ - A DATABASE_URL possui o campo de usuário e senha, por isso as variáveis USER e PASSWORD precisam ser as mesmas da URL.
  <hr>
   
 <div align="center">
