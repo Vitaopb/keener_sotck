@@ -43,7 +43,7 @@ Usei também um pouco de shell script para automatizar os comandos que prescisam
   
 ## Como rodar na sua maquina:
 ### Será nescessario instalar:
-  - [Node](https://nodejs.org/en/download/)
+  - [Node](https://nodejs.org/en/download/) certifique-se de ter também o npm
   - [Docker](https://docs.docker.com/get-docker/) e o [Docker-compose](https://docs.docker.com/compose/install/)
   - [Git](https://git-scm.com/downloads)
   - [Postman](https://www.postman.com/downloads/) (Para uma melhor experiência, mas pode ser qualquer outra API client.)
